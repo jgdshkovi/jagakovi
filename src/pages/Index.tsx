@@ -7,12 +7,14 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackgroundPattern from "@/components/BackgroundPattern";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <BackgroundPattern />
       <Header />
-      <main>
+      <main className="relative">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
@@ -26,3 +28,4 @@ const Index = () => {
 };
 
 export default Index;
+
