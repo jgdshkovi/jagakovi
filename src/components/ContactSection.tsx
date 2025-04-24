@@ -43,8 +43,8 @@ const ContactSection = () => {
     <section id="contact" className="py-24">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">Get In Touch</h2>
+          <p className="text-trendy-neutral">
             Have a project in mind or want to discuss potential opportunities? I'm just a message away.
           </p>
         </div>
@@ -54,36 +54,36 @@ const ContactSection = () => {
             <div className="bg-white p-6 rounded-xl shadow-sm border border-border">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <Mail className="h-5 w-5 text-accent" />
+                  <div className="bg-trendy-secondary p-3 rounded-lg">
+                    <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Email</h3>
-                    <a href="mailto:alex.morgan@example.com" className="text-sm text-muted-foreground hover:text-accent">
+                    <h3 className="font-medium mb-1 text-trendy-primary">Email</h3>
+                    <a href="mailto:alex.morgan@example.com" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
                       alex.morgan@example.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <Phone className="h-5 w-5 text-accent" />
+                  <div className="bg-trendy-secondary p-3 rounded-lg">
+                    <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Phone</h3>
-                    <a href="tel:+14155552671" className="text-sm text-muted-foreground hover:text-accent">
+                    <h3 className="font-medium mb-1 text-trendy-primary">Phone</h3>
+                    <a href="tel:+14155552671" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
                       +1 (415) 555-2671
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <MapPin className="h-5 w-5 text-accent" />
+                  <div className="bg-trendy-secondary p-3 rounded-lg">
+                    <MapPin className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Location</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-medium mb-1 text-trendy-primary">Location</h3>
+                    <p className="text-sm text-trendy-neutral">
                       San Francisco, California
                     </p>
                   </div>
@@ -91,28 +91,28 @@ const ContactSection = () => {
               </div>
 
               <div className="mt-8">
-                <h3 className="font-medium mb-4">Connect with me</h3>
+                <h3 className="font-medium mb-4 text-trendy-primary">Connect with me</h3>
                 <div className="flex gap-4">
                   <a 
                     href="#" 
-                    className="bg-secondary hover:bg-accent/10 transition-colors p-3 rounded-lg"
+                    className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
                     aria-label="GitHub"
                   >
-                    <Github className="h-5 w-5" />
+                    <Github className="h-5 w-5 text-trendy-primary" />
                   </a>
                   <a 
                     href="#" 
-                    className="bg-secondary hover:bg-accent/10 transition-colors p-3 rounded-lg"
+                    className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-5 w-5 text-trendy-primary" />
                   </a>
                   <a 
                     href="#" 
-                    className="bg-secondary hover:bg-accent/10 transition-colors p-3 rounded-lg"
+                    className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
                     aria-label="Twitter"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <Twitter className="h-5 w-5 text-trendy-primary" />
                   </a>
                 </div>
               </div>
@@ -120,11 +120,11 @@ const ContactSection = () => {
           </div>
 
           <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm border border-border">
-            <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+            <h3 className="text-xl font-bold mb-6 text-trendy-primary">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Full Name
                   </label>
                   <input
@@ -134,12 +134,12 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all"
+                    className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Email Address
                   </label>
                   <input
@@ -149,13 +149,13 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all"
+                    className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium mb-1 text-trendy-primary">
                   Subject
                 </label>
                 <input
@@ -165,12 +165,12 @@ const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all"
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
                   placeholder="Project Inquiry"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                <label htmlFor="message" className="block text-sm font-medium mb-1 text-trendy-primary">
                   Message
                 </label>
                 <textarea
@@ -180,14 +180,14 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all resize-none"
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-accent hover:bg-accent/90"
+                className="w-full bg-trendy-secondary hover:bg-trendy-secondary/90 text-white"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

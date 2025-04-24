@@ -1,3 +1,4 @@
+
 import { ArrowUpRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -60,11 +61,11 @@ const ProjectsSection = () => {
   const regularProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 bg-secondary/30">
+    <section id="projects" className="py-24 bg-trendy-accent/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">My Projects</h2>
+          <p className="text-trendy-neutral">
             Explore my recent work and side projects that highlight my technical skills
             and creative approach.
           </p>
@@ -89,12 +90,12 @@ const ProjectsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-4">
-                    <Button size="sm" variant="outline" className="bg-white/90 backdrop-blur-sm" asChild>
+                    <Button size="sm" variant="outline" className="bg-white/90 backdrop-blur-sm text-trendy-primary" asChild>
                       <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                         <ArrowUpRight className="h-4 w-4 mr-2" /> Live Demo
                       </a>
                     </Button>
-                    <Button size="sm" variant="outline" className="bg-white/90 backdrop-blur-sm" asChild>
+                    <Button size="sm" variant="outline" className="bg-white/90 backdrop-blur-sm text-trendy-primary" asChild>
                       <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" /> Code
                       </a>
@@ -104,16 +105,16 @@ const ProjectsSection = () => {
               </div>
 
               <div style={{ direction: "ltr" }}>
-                <span className="text-accent text-sm font-medium mb-2 block">Featured Project</span>
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                <p className="text-muted-foreground mb-6">
+                <span className="text-trendy-secondary text-sm font-medium mb-2 block">Featured Project</span>
+                <h3 className="text-2xl font-bold mb-4 text-trendy-primary">{project.title}</h3>
+                <p className="text-trendy-neutral mb-6">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium"
+                      className="px-3 py-1 rounded-full bg-white text-trendy-secondary text-xs font-medium border border-trendy-secondary/30"
                     >
                       {tag}
                     </span>
@@ -125,7 +126,7 @@ const ProjectsSection = () => {
 
           {/* Other Projects */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">Other Projects</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center text-trendy-primary">Other Projects</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {regularProjects.map((project, idx) => (
                 <div
@@ -140,21 +141,21 @@ const ProjectsSection = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-bold mb-2">{project.title}</h4>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <h4 className="text-xl font-bold mb-2 text-trendy-primary">{project.title}</h4>
+                    <p className="text-trendy-neutral text-sm mb-4">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.tags.slice(0, 3).map((tag, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 rounded-full bg-secondary text-xs font-medium"
+                          className="px-2 py-1 rounded-full bg-white text-xs font-medium border border-trendy-secondary/30 text-trendy-secondary"
                         >
                           {tag}
                         </span>
                       ))}
                       {project.tags.length > 3 && (
-                        <span className="px-2 py-1 rounded-full bg-secondary text-xs font-medium">
+                        <span className="px-2 py-1 rounded-full bg-white text-xs font-medium border border-trendy-secondary/30 text-trendy-secondary">
                           +{project.tags.length - 3}
                         </span>
                       )}
@@ -162,7 +163,7 @@ const ProjectsSection = () => {
                     <div className="flex gap-4">
                       <a
                         href={project.demoUrl}
-                        className="text-sm font-medium text-accent hover:underline flex items-center gap-1"
+                        className="text-sm font-medium text-trendy-secondary hover:underline flex items-center gap-1"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -170,7 +171,7 @@ const ProjectsSection = () => {
                       </a>
                       <a
                         href={project.codeUrl}
-                        className="text-sm font-medium hover:underline flex items-center gap-1"
+                        className="text-sm font-medium text-trendy-primary hover:underline flex items-center gap-1"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

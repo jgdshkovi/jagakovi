@@ -62,16 +62,16 @@ const ExperienceSection = () => {
     <section id="experience" className="section-padding py-24">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience & Education</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">Experience & Education</h2>
+          <p className="text-trendy-neutral">
             My professional journey and academic background that have shaped my career.
           </p>
         </div>
 
         <div className="space-y-16">
           <div>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-              <span className="w-6 h-6 bg-accent rounded-full flex items-center justify-center text-white text-sm">
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-trendy-primary">
+              <span className="w-6 h-6 bg-trendy-secondary rounded-full flex items-center justify-center text-white text-sm">
                 W
               </span>
               Work Experience
@@ -79,26 +79,26 @@ const ExperienceSection = () => {
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
-                <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-border">
-                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-accent/80 ring-4 ring-secondary" />
+                <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-trendy-secondary/30">
+                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-trendy-secondary ring-4 ring-trendy-accent" />
                   
                   <div className="mb-2">
-                    <h4 className="text-xl font-bold">{exp.title}</h4>
-                    <div className="text-accent font-medium">{exp.company}</div>
+                    <h4 className="text-xl font-bold text-trendy-primary">{exp.title}</h4>
+                    <div className="text-trendy-secondary font-medium">{exp.company}</div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-trendy-neutral">
                     <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
+                      <Calendar className="h-4 w-4 text-trendy-secondary" />
                       <span>{exp.duration}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
+                      <MapPin className="h-4 w-4 text-trendy-secondary" />
                       <span>{exp.location}</span>
                     </div>
                   </div>
                   
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <ul className="list-disc list-inside space-y-1 text-trendy-neutral">
                     {exp.description.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -109,8 +109,8 @@ const ExperienceSection = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-              <span className="w-6 h-6 bg-accent rounded-full flex items-center justify-center text-white text-sm">
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-trendy-primary">
+              <span className="w-6 h-6 bg-trendy-secondary rounded-full flex items-center justify-center text-white text-sm">
                 E
               </span>
               Education
@@ -118,26 +118,26 @@ const ExperienceSection = () => {
 
             <div className="space-y-8">
               {education.map((edu, index) => (
-                <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-border">
-                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-accent/80 ring-4 ring-secondary" />
+                <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-trendy-secondary/30">
+                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-trendy-secondary ring-4 ring-trendy-accent" />
                   
                   <div className="mb-2">
-                    <h4 className="text-xl font-bold">{edu.degree}</h4>
-                    <div className="text-accent font-medium">{edu.institution}</div>
+                    <h4 className="text-xl font-bold text-trendy-primary">{edu.degree}</h4>
+                    <div className="text-trendy-secondary font-medium">{edu.institution}</div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-trendy-neutral">
                     <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
+                      <Calendar className="h-4 w-4 text-trendy-secondary" />
                       <span>{edu.duration}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
+                      <MapPin className="h-4 w-4 text-trendy-secondary" />
                       <span>{edu.location}</span>
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground">{edu.description}</p>
+                  <p className="text-trendy-neutral">{edu.description}</p>
                 </div>
               ))}
             </div>

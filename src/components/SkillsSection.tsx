@@ -49,8 +49,8 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="section-padding py-24">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
-        <p className="text-muted-foreground">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">My Skills</h2>
+        <p className="text-trendy-neutral">
           With expertise across multiple domains, I bring a comprehensive skill set to every project.
         </p>
       </div>
@@ -61,7 +61,9 @@ const SkillsSection = () => {
             key={category.id}
             variant={activeCategory === category.id ? "default" : "outline"}
             onClick={() => setActiveCategory(category.id)}
-            className={activeCategory === category.id ? "bg-accent hover:bg-accent/90" : ""}
+            className={activeCategory === category.id ? 
+              "bg-trendy-secondary text-white hover:bg-trendy-secondary/90" : 
+              "border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10"}
           >
             {category.name}
           </Button>
@@ -76,12 +78,12 @@ const SkillsSection = () => {
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="flex justify-between mb-2">
-              <span className="font-medium">{skill.name}</span>
-              <span className="text-accent font-medium">{skill.proficiency}%</span>
+              <span className="font-medium text-trendy-primary">{skill.name}</span>
+              <span className="text-trendy-secondary font-medium">{skill.proficiency}%</span>
             </div>
-            <div className="w-full bg-secondary rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className="bg-accent h-2 rounded-full transition-all duration-1000 ease-out"
+                className="bg-trendy-secondary h-2 rounded-full transition-all duration-1000 ease-out"
                 style={{ width: `${skill.proficiency}%` }}
               ></div>
             </div>
@@ -90,7 +92,7 @@ const SkillsSection = () => {
       </div>
 
       <div className="mt-16 text-center">
-        <h3 className="text-2xl font-bold mb-6">Additional Expertise</h3>
+        <h3 className="text-2xl font-bold mb-6 text-trendy-primary">Additional Expertise</h3>
         <div className="flex flex-wrap justify-center gap-3">
           {[
             "TailwindCSS",
@@ -108,7 +110,7 @@ const SkillsSection = () => {
           ].map((tag, index) => (
             <span
               key={index}
-              className="px-4 py-2 rounded-full bg-secondary text-sm font-medium hover:bg-accent/10 transition-colors"
+              className="px-4 py-2 rounded-full bg-white text-trendy-primary text-sm font-medium border border-trendy-secondary/30 hover:bg-trendy-secondary/10 transition-colors"
             >
               {tag}
             </span>
