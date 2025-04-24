@@ -4,16 +4,16 @@ const BackgroundPattern = () => {
     <div className="fixed inset-0 -z-10">
       {/* Light background with subtle dot pattern */}
       <div 
-        className="absolute inset-0 bg-[#F1F0FB]"
+        className="absolute inset-0 bg-[#FDF6F1]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(145, 134, 245, 0.1) 1px, transparent 0)`,
-          backgroundSize: '24px 24px'
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 0)`,
+          backgroundSize: '20px 20px'
         }}
       />
       
-      {/* Soft glow effects */}
-      <div className="absolute -top-48 -right-48 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl" />
-      <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl" />
+      {/* Very subtle glow effects */}
+      <div className="absolute -top-48 -right-48 w-96 h-96 bg-[#FDE1D3]/20 rounded-full blur-3xl" />
+      <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-[#D3E4FD]/20 rounded-full blur-3xl" />
     </div>
   );
 };

@@ -12,19 +12,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Trendy color palette for 2025
+        // Updated trendy color palette for 2025
         trendy: {
-          primary: '#9B87F5',   // Soft purple
-          secondary: '#7E69AB', // Deeper purple
-          accent: '#1EAEDB',    // Bright blue
-          neutral: '#8E9196',   // Neutral gray
+          primary: '#232323',    // Almost black
+          secondary: '#E86A33',  // Coral orange
+          accent: '#FEE8D8',     // Soft peach
+          neutral: '#666666',    // Neutral gray
         }
       },
       backgroundColor: {
-        'light-dot': '#F1F0FB'  // Light background color
+        'light-dot': '#FDF6F1'  // Very light warm background
       },
       backgroundImage: {
-        'dot-pattern': 'radial-gradient(circle at 1px 1px, rgba(145, 134, 245, 0.1) 1px, transparent 0)'
+        'dot-pattern': 'radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 0)'
       }
     }
   },
