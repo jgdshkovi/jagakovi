@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       title: "OEIS Graph Database Project",
       description:
         "Developed Neo4j graph database from OEIS .seq files to model relationships between sequences, authors, and citations. Leveraged LLMs and RAG architectures for metadata extraction and sequence categorization.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/OEIS2.png",
       tags: ["Neo4j", "LLMs", "Sequence Analysis", "Graph Database", "Python"],
       demoUrl: "#",
       codeUrl: "#",
@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       title: "Weather Data GCP Pipeline",
       description:
         "Designed automated ETL pipeline on Google Cloud Platform for weather data management. Used Python, Pandas, and OpenWeather API for data processing and created interactive visualizations with Looker Studio.",
-      image: "https://images.unsplash.com/photo-1561485163-7347bdba6be8",
+      image: "https://raw.githubusercontent.com/jgdshkovi/MNGMT-ACCESS-FINAL/refs/heads/main/images/GCP-Data-Pipeline.png",
       tags: ["GCP", "ETL", "Cloud Storage", "BigQuery", "Looker Studio"],
       demoUrl: "#",
       codeUrl: "#",
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
       title: "Object Recognition on Historic Videos",
       description:
         "Enhanced IU Libraries Moving Image Archive accessibility using DINO+SAM architecture and YOLOv8. Improved historical footage object detection by 20% through unsupervised learning.",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe",
+      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/IULMIA1.png",
       tags: ["Computer Vision", "DINO+SAM", "YOLOv8", "Object Detection", "PyTorch"],
       demoUrl: "#",
       codeUrl: "#",
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       title: "Home Credit Default Risk Analysis",
       description:
         "Architected deep learning model (MLP) achieving 68.26% test accuracy for credit risk prediction. Enhanced performance through feature selection and ensemble methods.",
-      image: "https://images.unsplash.com/photo-1616803140344-7a9b0eebd3d2",
+      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/HCDR%20Thumbnail.jpeg",
       tags: ["Python", "scikit-learn", "TensorFlow", "Feature Engineering", "MLP"],
       demoUrl: "#",
       codeUrl: "#",
