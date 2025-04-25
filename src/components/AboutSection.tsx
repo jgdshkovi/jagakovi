@@ -10,8 +10,8 @@ const AboutSection = () => {
             <div className="relative">
               <div className="aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-border shadow-xl">
                 <img
-                  // src="https://raw.githubusercontent.com/jagakovi/jagakovi.github.io/refs/heads/main/jaga_200x200.jpg"
-                  src="jaga.jpeg"
+                  src="https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/jaga.jpeg"
+                  // src="jaga.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
