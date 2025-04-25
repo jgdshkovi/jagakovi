@@ -5,13 +5,13 @@ const Footer = () => {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="bg-secondary/80 py-12">
+    <footer className="bg-secondary/20 py-12">
       <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="font-heading text-xl font-bold">
               <a href="#hero" className="text-accent">
-                <span className="relative pr-1">Jaga</span>
+                <span className="relative pr-1 text-trendy-secondary">Jaga</span>
               </a>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">

@@ -3,14 +3,15 @@ import { Calendar, Mail, MapPin } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-secondary/50">
+    <section id="about" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-start">
           <div className="w-full md:w-2/5 lg:sticky lg:top-20">
             <div className="relative">
               <div className="aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-border shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22"
+                  // src="https://raw.githubusercontent.com/jagakovi/jagakovi.github.io/refs/heads/main/jaga_200x200.jpg"
+                  src="jaga.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -63,7 +64,7 @@ const AboutSection = () => {
                 { number: "1", label: "Publication" },
               ].map((item, index) => (
                 <div key={index} className="text-center p-4 rounded-lg bg-white shadow-sm border border-border">
-                  <h3 className="text-2xl md:text-3xl font-bold text-accent">{item.number}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-accent text-trendy-secondary">{item.number}</h3>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
                 </div>
               ))}

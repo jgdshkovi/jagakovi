@@ -25,12 +25,12 @@ const Header = () => {
       <div className="container mx-auto px-6 md:px-8 lg:px-12 flex justify-between items-center">
         <div className="font-heading text-lg font-bold">
           <a href="#hero" className="text-accent hover:text-accent/90">
-            <span className="relative pr-1">Jaga</span>
+            <span className="relative pr-1 text-trendy-secondary">Jaga</span>
           </a>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          {["About", "Skills", "Projects", "Experience", "Contact"].map(
+          {["About", "Skills", "Projects", "Experience"].map(
             (item) => (
               <a
                 key={item}
