@@ -103,7 +103,7 @@ const SkillsSection = () => {
       name: "Cloud & DevTools",
       skills: [
         { name: "AWS", proficiency: 85 },
-        { name: "Azure", proficiency: 80 },
+        { name: "Microsoft Azure", proficiency: 80 },
         { name: "Docker", proficiency: 90 },
         { name: "Terraform", proficiency: 75 },
         { name: "Git/CI/CD", proficiency: 85 },
