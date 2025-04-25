@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -41,7 +41,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24">
-      <div className="container">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">Get In Touch</h2>
           <p className="text-trendy-neutral">
@@ -59,8 +59,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Email</h3>
-                    <a href="mailto:alex.morgan@example.com" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
-                      alex.morgan@example.com
+                    <a href="mailto:jagakovi@gmail.com" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
+                      jagakovi@gmail.com
                     </a>
                   </div>
                 </div>
@@ -71,8 +71,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Phone</h3>
-                    <a href="tel:+14155552671" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
-                      +1 (415) 555-2671
+                    <a href="tel:+14084754078" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
+                      +1 (408) 475-4078
                     </a>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Location</h3>
                     <p className="text-sm text-trendy-neutral">
-                      San Francisco, California
+                      California, CA
                     </p>
                   </div>
                 </div>
@@ -94,25 +94,31 @@ const ContactSection = () => {
                 <h3 className="font-medium mb-4 text-trendy-primary">Connect with me</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/jgdshkovi" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
                     aria-label="GitHub"
                   >
                     <Github className="h-5 w-5 text-trendy-primary" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://linkedin.com/in/jgdshkovi" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-5 w-5 text-trendy-primary" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://jgdshkovi.github.io/portfolio" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
-                    aria-label="Twitter"
+                    aria-label="Portfolio"
                   >
-                    <Twitter className="h-5 w-5 text-trendy-primary" />
+                    <ArrowUpRight className="h-5 w-5 text-trendy-primary" />
                   </a>
                 </div>
               </div>

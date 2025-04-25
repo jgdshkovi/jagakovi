@@ -5,51 +5,51 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "TechHub Analytics",
+      title: "OEIS Graph Database Project",
       description:
-        "A comprehensive analytics dashboard for monitoring and visualizing data metrics in real-time.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      tags: ["React", "TypeScript", "Recharts", "Firebase"],
+        "Developed Neo4j graph database from OEIS .seq files to model relationships between sequences, authors, and citations. Leveraged LLMs and RAG architectures for metadata extraction and sequence categorization.",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+      tags: ["Neo4j", "LLMs", "Sequence Analysis", "Graph Database", "Python"],
       demoUrl: "#",
       codeUrl: "#",
       featured: true,
     },
     {
-      title: "EcoTrack Mobile App",
+      title: "Weather Data GCP Pipeline",
       description:
-        "An environmental impact tracking application that helps users monitor their carbon footprint.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      tags: ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+        "Designed automated ETL pipeline on Google Cloud Platform for weather data management. Used Python, Pandas, and OpenWeather API for data processing and created interactive visualizations with Looker Studio.",
+      image: "https://images.unsplash.com/photo-1561485163-7347bdba6be8",
+      tags: ["GCP", "ETL", "Cloud Storage", "BigQuery", "Looker Studio"],
       demoUrl: "#",
       codeUrl: "#",
       featured: true,
     },
     {
-      title: "Portfolio 2025",
+      title: "Object Recognition on Historic Videos",
       description:
-        "A modern, responsive portfolio website built with the latest web technologies.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      tags: ["Next.js", "TailwindCSS", "Framer Motion", "Vercel"],
+        "Enhanced IU Libraries Moving Image Archive accessibility using DINO+SAM architecture and YOLOv8. Improved historical footage object detection by 20% through unsupervised learning.",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe",
+      tags: ["Computer Vision", "DINO+SAM", "YOLOv8", "Object Detection", "PyTorch"],
       demoUrl: "#",
       codeUrl: "#",
       featured: false,
     },
     {
-      title: "SmartHome Controller",
+      title: "Home Credit Default Risk Analysis",
       description:
-        "An IoT dashboard for controlling and monitoring smart home devices.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      tags: ["React", "Node.js", "Socket.io", "MQTT", "AWS IoT"],
+        "Architected deep learning model (MLP) achieving 68.26% test accuracy for credit risk prediction. Enhanced performance through feature selection and ensemble methods.",
+      image: "https://images.unsplash.com/photo-1616803140344-7a9b0eebd3d2",
+      tags: ["Python", "scikit-learn", "TensorFlow", "Feature Engineering", "MLP"],
       demoUrl: "#",
       codeUrl: "#",
       featured: false,
     },
     {
-      title: "CodeCollab",
+      title: "GPT-4o Speech Transformer",
       description:
-        "A real-time collaborative code editor with integrated chat and version control.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      tags: ["Next.js", "WebSockets", "Monaco Editor", "Express"],
+        "Built speech transformation system for aphasic input using GPT-4o and SentenceTransformers. Integrated Whisper STT and pyttsx3 TTS with real-time feedback mechanisms.",
+      image: "https://images.unsplash.com/photo-1633613286991-611fe299c4be",
+      tags: ["GPT-4o", "Whisper", "SentenceTransformers", "NLP", "Speech Processing"],
       demoUrl: "#",
       codeUrl: "#",
       featured: false,
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-24 bg-trendy-accent/30">
-      <div className="container">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">My Projects</h2>
           <p className="text-trendy-neutral">

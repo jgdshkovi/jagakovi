@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <BackgroundPattern />
       <Header />
-      <main className="relative">
+      <main className="relative px-6 md:px-8 lg:px-12">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

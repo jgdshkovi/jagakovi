@@ -11,22 +11,22 @@ const HeroSection = () => {
       <div className="absolute -top-48 -right-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
       
-      <div className="container flex flex-col items-start justify-center gap-4 z-10">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 flex flex-col items-start justify-center gap-4 z-10">
         <p className="text-trendy-secondary font-medium mb-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           Hello, I'm
         </p>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          Alex Morgan
+          Jagadeesh Kovi
         </h1>
         
         <h2 className="text-2xl md:text-4xl text-trendy-neutral font-medium mb-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          Frontend Developer <span className="text-trendy-secondary">&</span> UI Designer
+          AI/ML Research <span className="text-trendy-secondary">&</span> Data Engineer
         </h2>
         
         <p className="max-w-xl text-trendy-neutral leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          Building exceptional digital experiences with modern technologies. 
-          Passionate about creating intuitive interfaces and seamless interactions.
+          Building advanced AI/ML solutions and scalable data pipelines. 
+          Specialized in LLMs, NLP, and cloud-based machine learning systems.
         </p>
         
         <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: "1s" }}>
@@ -34,7 +34,7 @@ const HeroSection = () => {
             View Projects <ArrowRight className="h-4 w-4" />
           </Button>
           
-          <Button variant="outline" size="lg" className="border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10">
+          <Button variant="outline" size="lg" className="border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10" onClick={() => window.open('/Jagadeesh_Kovi.pdf', '_blank')}>
             Download Resume
           </Button>
         </div>

@@ -4,7 +4,7 @@ import { Calendar, Mail, MapPin } from "lucide-react";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-secondary/50">
-      <div className="container">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-start">
           <div className="w-full md:w-2/5 lg:sticky lg:top-20">
             <div className="relative">
@@ -19,15 +19,15 @@ const AboutSection = () => {
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-2 text-sm">
                     <Mail className="h-4 w-4 text-accent" />
-                    <span>alex.morgan@example.com</span>
+                    <span>jagakovi@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <Calendar className="h-4 w-4 text-accent" />
-                    <span>5+ Years Experience</span>
+                    <span>3+ Years Experience</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-accent" />
-                    <span>San Francisco, CA</span>
+                    <span>California, CA</span>
                   </div>
                 </div>
               </div>
@@ -38,28 +38,29 @@ const AboutSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Hello! I'm Alex, a frontend developer and designer with a passion for creating beautiful, 
-                functional digital experiences. With over 5 years in the industry, I've developed a 
-                keen eye for detail and a commitment to crafting user-centric designs.
+                Hello! I'm Jagadeesh, an AI/ML Research Engineer with expertise in developing advanced LLM pipelines, 
+                backend systems, and NLP tools. With a strong background in machine learning and data science, 
+                I specialize in building scalable AI solutions for both public and private sectors.
               </p>
               <p>
-                I specialize in building responsive web applications using modern JavaScript frameworks 
-                like React and Next.js. My approach combines technical expertise with creative problem-solving, 
-                ensuring that the end product is not only visually appealing but also performs exceptionally.
+                My work focuses on fine-tuning models on supercomputers, building scalable analytics workflows, 
+                and integrating AI in healthcare, finance, and civic domains. I'm proficient in Python, PyTorch, 
+                Docker, AWS, and advanced NLP techniques, with a strong emphasis on system performance, 
+                inference accuracy, and real-time UX.
               </p>
               <p>
-                When I'm not coding or designing, you can find me hiking in the mountains, reading about new 
-                technology trends, or experimenting with photography. I believe in continuous learning and 
-                constantly push myself to stay updated with the latest industry developments.
+                Currently pursuing a Master's in Data Science at Indiana University Bloomington, I'm deeply passionate 
+                about research in NLP, AI Agents, LLMs, and Reinforcement Learning. I'm always exploring new technologies 
+                and methodologies to push the boundaries of what's possible with artificial intelligence.
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { number: "5+", label: "Years Experience" },
-                { number: "50+", label: "Projects Completed" },
-                { number: "25+", label: "Happy Clients" },
-                { number: "10+", label: "Design Awards" },
+                { number: "3+", label: "Years Experience" },
+                { number: "12M+", label: "Data Records Processed" },
+                { number: "5+", label: "Research Projects" },
+                { number: "1", label: "Publication" },
               ].map((item, index) => (
                 <div key={index} className="text-center p-4 rounded-lg bg-white shadow-sm border border-border">
                   <h3 className="text-2xl md:text-3xl font-bold text-accent">{item.number}</h3>

@@ -4,63 +4,73 @@ import { Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "TechNova Solutions",
-      duration: "2022 - Present",
-      location: "San Francisco, CA",
+      title: "Data Scientist",
+      company: "Project 990",
+      duration: "Sep 2024 - Present",
+      location: "California, CA",
       description: [
-        "Lead development of responsive web applications using React and TypeScript",
-        "Implemented state management solutions with Redux and Context API",
-        "Optimized application performance, achieving 40% faster load times",
-        "Mentored junior developers and conducted code reviews",
+        "Architected scalable backend and streamlined SQL queries for processing over 12M tax records",
+        "Leveraged Indiana University's Big Red 200 supercomputer to fine-tune NLP models",
+        "Engineered AI chatbots using advanced NLP techniques for improved data access",
       ],
     },
     {
-      title: "UI/UX Developer",
-      company: "DesignPro Studios",
-      duration: "2020 - 2022",
+      title: "AI Engineer (Linguistic Research)",
+      company: "Indiana University - PBS",
+      duration: "Sep 2024 - Apr 2025",
+      location: "Bloomington, IN",
+      description: [
+        "Built GPT-4o-based speech transformer for aphasic input reconstruction",
+        "Created correction pipeline with SentenceTransformers for improved accuracy",
+        "Used Whisper for STT and pyttsx3 for TTS in language processing applications",
+        "Designed real-time feedback system for language rehabilitation",
+      ],
+    },
+    {
+      title: "Data Analyst (ML & NLP)",
+      company: "Indiana University - Kelley School of Business",
+      duration: "May 2024 - Aug 2024",
+      location: "Bloomington, IN",
+      description: [
+        "Developed NLP-based risk visualization tool for business analysis",
+        "Engineered ETL pipeline using Python, AWS Lambda, and RDS",
+        "Launched real-time dashboard with AWS EC2 and CloudWatch monitoring",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "FIS Global",
+      duration: "Oct 2021 - Nov 2022",
       location: "Remote",
       description: [
-        "Created interactive prototypes and wireframes in Figma",
-        "Collaborated with designers to implement pixel-perfect interfaces",
-        "Developed component libraries and design systems",
-        "Conducted user testing and implemented feedback",
-      ],
-    },
-    {
-      title: "Frontend Developer",
-      company: "WebSphere Inc.",
-      duration: "2018 - 2020",
-      location: "Austin, TX",
-      description: [
-        "Built responsive websites using HTML, CSS, and JavaScript",
-        "Integrated REST APIs and third-party services",
-        "Optimized websites for cross-browser compatibility",
-        "Implemented SEO best practices",
+        "Refined data pipelines for 30+ banking modules via SQL & Apache Kafka",
+        "Deployed interactive Tableau dashboards for financial analytics",
+        "Applied Python (Pandas, NumPy) and SQL for ETL and data aggregation",
+        "Integrated automated data validation in CI/CD pipelines",
       ],
     },
   ];
 
   const education = [
     {
-      degree: "Master's in Computer Science",
-      institution: "Stanford University",
-      duration: "2016 - 2018",
-      location: "Stanford, CA",
-      description: "Specialized in Human-Computer Interaction and Web Technologies",
+      degree: "Master of Science - Data Science",
+      institution: "Indiana University Bloomington",
+      duration: "Aug 2023 - May 2025",
+      location: "Bloomington, IN",
+      description: "GPA: 3.74/4.0 | Research Interests: NLP, AI Agents, LLMs, Applied Machine Learning, Reinforcement Learning",
     },
     {
-      degree: "Bachelor's in Software Engineering",
-      institution: "University of Texas",
-      duration: "2012 - 2016",
-      location: "Austin, TX",
-      description: "Focus on web development and interactive design",
+      degree: "Bachelor's in Computer Science",
+      institution: "Siddharth Institute of Engineering & Technology",
+      duration: "Jul 2017 - Jun 2021",
+      location: "India",
+      description: "CGPA: 8.8/10.0 | Publication: Detection of Online Toxic Comments Using Deep Learning",
     },
   ];
 
   return (
     <section id="experience" className="section-padding py-24">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-trendy-primary">Experience & Education</h2>
           <p className="text-trendy-neutral">

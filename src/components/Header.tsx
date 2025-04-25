@@ -22,10 +22,10 @@ const Header = () => {
           : "py-5 bg-transparent"
       }`}
     >
-      <div className="container flex justify-between items-center">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 flex justify-between items-center">
         <div className="font-heading text-lg font-bold">
           <a href="#hero" className="text-accent hover:text-accent/90">
-            <span className="relative pr-1">D</span>ev
+            <span className="relative pr-1">Jaga</span>
           </a>
         </div>
 
