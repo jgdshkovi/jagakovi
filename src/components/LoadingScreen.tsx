@@ -6,7 +6,7 @@ const LoadingScreen = () => {
     <div className="loading-container">
       <div className="logo-wrapper">
         <div className="logo-line"></div>
-        <div className="letter">J</div>
+        <div className="letter">Jagadeesh Kovi</div>
       </div>
     </div>
   );
