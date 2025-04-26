@@ -2,7 +2,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  animatedEntry?: boolean;
+}
+
+const HeroSection = ({ animatedEntry = false }: HeroSectionProps) => {
   return (
     <section
       id="hero"
@@ -16,20 +20,20 @@ const HeroSection = () => {
           Hello, I'm
         </p>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-4 ${animatedEntry ? 'hero-name-animated' : 'animate-fade-in'}`} style={{ animationDelay: animatedEntry ? "0s" : "0.4s" }}>
           Jagadeesh Kovi
         </h1>
         
-        <h2 className="text-2xl md:text-4xl text-trendy-neutral font-medium mb-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+        <h2 className="text-2xl md:text-4xl text-trendy-neutral font-medium mb-6 animate-fade-in" style={{ animationDelay: animatedEntry ? "0.4s" : "0.6s" }}>
           AI/ML Research <span className="text-trendy-secondary">&</span> Data Engineer
         </h2>
         
-        <p className="max-w-xl text-trendy-neutral leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+        <p className="max-w-xl text-trendy-neutral leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: animatedEntry ? "0.6s" : "0.8s" }}>
           Building advanced AI/ML solutions and scalable data pipelines. 
           Specialized in LLMs, NLP, and cloud-based machine learning systems.
         </p>
         
-        <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: "1s" }}>
+        <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: animatedEntry ? "0.8s" : "1s" }}>
           <Button size="lg" className="gap-2 bg-trendy-secondary text-white hover:bg-trendy-secondary/90">
             View Projects <ArrowRight className="h-4 w-4" />
           </Button>
