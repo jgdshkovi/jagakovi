@@ -13,42 +13,34 @@ import LoadingScreen from "@/components/LoadingScreen";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [contentReady, setContentReady] = useState(false);
 
   useEffect(() => {
-    // Preload important assets if needed
-    const preloadContent = async () => {
-      // Simulate content loading
-      await new Promise(resolve => setTimeout(resolve, 500));
-      setContentReady(true);
-    };
-    
-    preloadContent();
-  }, []);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Adjust timing as needed
 
-  const handleAnimationComplete = () => {
-    setIsLoading(false);
-  };
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      {isLoading && (
-        <LoadingScreen onAnimationComplete={handleAnimationComplete} />
+      {isLoading ? (
+        <LoadingScreen />
+      ) : (
+        <div className="min-h-screen overflow-x-hidden animate-fade-in">
+          <BackgroundPattern />
+          <Header />
+          <main className="relative px-6 md:px-8 lg:px-12">
+            <HeroSection />
+            <AboutSection />
+            <ExperienceSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <ContactSection />
+          </main>
+          <Footer />
+        </div>
       )}
-      
-      <div className={`min-h-screen overflow-x-hidden ${!isLoading ? 'content-loaded' : 'content-pending'}`}>
-        <BackgroundPattern />
-        <Header />
-        <main className="relative px-6 md:px-8 lg:px-12">
-          <HeroSection animatedEntry={!isLoading} />
-          <AboutSection />
-          <ExperienceSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ContactSection />
-        </main>
-        <Footer />
-      </div>
     </>
   );
 };
