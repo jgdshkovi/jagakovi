@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,7 +11,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Updated trendy color palette for 2025
         trendy: {
           primary: '#232323',    // Almost black
           secondary: '#E86A33',  // Coral orange
@@ -50,6 +48,15 @@ export default {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         heading: ["Space Grotesk", "sans-serif"],
+      },
+      animation: {
+        "fade-in": "fade-in 0.5s ease-in forwards",
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
     }
   },

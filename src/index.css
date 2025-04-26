@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,6 +77,45 @@
 
   .glass {
     @apply bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+
+  .loading-container {
+    @apply fixed inset-0 bg-background flex items-center justify-center z-50;
+  }
+
+  .logo-wrapper {
+    @apply relative w-24 h-24 flex items-center justify-center;
+  }
+
+  .logo-line {
+    @apply absolute w-full h-full opacity-0;
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+    animation: letter-draw 2s ease forwards;
+  }
+
+  .letter {
+    @apply text-6xl font-bold text-trendy-secondary opacity-0;
+    animation: fade-in 0.8s ease forwards 1s;
+  }
+}
+
+@keyframes letter-draw {
+  to {
+    stroke-dashoffset: 0;
+    @apply opacity-100;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    @apply opacity-100;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    @apply opacity-0;
   }
 }
 
