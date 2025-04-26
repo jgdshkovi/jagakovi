@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -81,29 +82,74 @@
 
   .loading-container {
     @apply fixed inset-0 bg-background flex items-center justify-center z-50;
+    transition: opacity 0.5s ease-in-out;
   }
 
-  .logo-wrapper {
-    @apply relative w-24 h-24 flex items-center justify-center;
+  .loading-complete {
+    @apply opacity-0;
+    pointer-events: none;
   }
 
-  .logo-line {
-    @apply absolute w-full h-full opacity-0;
-    stroke-dasharray: 550;
-    stroke-dashoffset: 550;
-    animation: letter-draw 2s ease forwards;
+  .name-wrapper {
+    @apply relative font-heading;
+    width: 80vw;
+    max-width: 800px;
+    height: 20vh;
+    max-height: 200px;
   }
 
-  .letter {
-    @apply text-6xl font-bold text-trendy-secondary opacity-0;
-    animation: fade-in 0.8s ease forwards 1s;
+  .name-svg {
+    @apply absolute inset-0 w-full h-full;
+  }
+
+  .loading-name-text {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold fill-none stroke-trendy-secondary;
+    stroke-width: 1px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: name-stroke 2s ease forwards;
+  }
+
+  .loading-name {
+    @apply absolute inset-0 text-5xl md:text-6xl lg:text-7xl font-bold text-transparent flex items-center justify-center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color 0.5s ease;
+  }
+
+  .fill-text {
+    @apply text-trendy-secondary;
+  }
+
+  .content-pending {
+    @apply opacity-0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .content-loaded {
+    @apply opacity-100;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .hero-name-animated {
+    animation: hero-name-appear 0.8s ease-out forwards;
   }
 }
 
-@keyframes letter-draw {
+@keyframes name-stroke {
   to {
     stroke-dashoffset: 0;
-    @apply opacity-100;
+  }
+}
+
+@keyframes hero-name-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
