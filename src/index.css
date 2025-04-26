@@ -80,11 +80,11 @@
   }
 
   .loading-container {
-    @apply fixed inset-0 bg-background flex items-center justify-center z-50;
+    @apply fixed inset-0 bg-background z-50;
   }
 
   .logo-wrapper {
-    @apply relative w-24 h-24 flex items-center justify-center;
+    @apply container mx-auto px-6;
   }
 
   .logo-line {
@@ -95,7 +95,7 @@
   }
 
   .letter {
-    @apply text-6xl font-bold text-trendy-secondary opacity-0;
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold text-trendy-secondary opacity-0 font-heading;
     animation: fade-in 0.8s ease forwards 1s;
   }
 }
