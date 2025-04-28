@@ -132,7 +132,7 @@ const SkillsSection = () => {
     });
   }, [categories]);
 
-  useInterval(rotateCategory, 5000);
+  useInterval(rotateCategory, 4000);
 
   const activeSkills = categories.find((cat) => cat.id === activeCategory)?.skills || [];
 

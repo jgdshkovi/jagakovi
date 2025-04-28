@@ -30,7 +30,7 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          {["About", "Skills", "Projects", "Experience"].map(
+          {["About", "Skills", "Experience", "Projects"].map(
             (item) => (
               <a
                 key={item}
