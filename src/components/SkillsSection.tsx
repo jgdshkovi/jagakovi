@@ -1,8 +1,9 @@
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Brain, Cloud, Code } from "lucide-react";
 import { SiPython, SiJavascript, SiReact, SiDocker, SiGit } from "react-icons/si";
 import { FaDatabase, FaBrain, FaCode, FaNetworkWired, FaCloud, FaLayerGroup, FaRobot, FaServer, FaCogs, FaAws, FaMicrosoft, FaTools, FaPython, FaJs, FaDocker } from "react-icons/fa";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const getAdditionalSkillIcon = (skillName: string) => {
   const iconSize = 24;
@@ -135,19 +136,21 @@ const SkillsSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
-        {categories.map((category) => (
-          <Button
-            key={category.id}
-            variant={activeCategory === category.id ? "default" : "outline"}
-            onClick={() => setActiveCategory(category.id)}
-            className={activeCategory === category.id ? 
-              "bg-trendy-secondary text-white hover:bg-trendy-secondary/90" : 
-              "border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10"}
-          >
-            {category.name}
-          </Button>
-        ))}
+      <div className="flex justify-center mb-12">
+        <ToggleGroup type="single" value={activeCategory} onValueChange={(value) => value && setActiveCategory(value)}>
+          <ToggleGroupItem value="ml-ai" aria-label="ML & AI" className="flex items-center gap-2">
+            <Brain className="h-4 w-4" />
+            ML & AI
+          </ToggleGroupItem>
+          <ToggleGroupItem value="cloud" aria-label="Cloud & DevTools" className="flex items-center gap-2">
+            <Cloud className="h-4 w-4" />
+            Cloud & DevTools
+          </ToggleGroupItem>
+          <ToggleGroupItem value="programming" aria-label="Programming" className="flex items-center gap-2">
+            <Code className="h-4 w-4" />
+            Programming
+          </ToggleGroupItem>
+        </ToggleGroup>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
