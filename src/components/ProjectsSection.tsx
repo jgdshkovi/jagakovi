@@ -6,11 +6,25 @@ import { Description } from "@radix-ui/react-toast";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "LuddyBot: AI-Powered Academic Support Chatbot",
+      description:[
+        "As part of a team project at Indiana University, I helped develop 𝙇𝙪𝙙𝙙𝙮𝘽𝙤𝙩, an AI-powered Chrome Extension chatbot designed to assist students with academic queries by accessing resources from the Luddy School website. We built a 𝙍𝙚𝙩𝙧𝙞𝙚𝙫𝙖𝙡-𝘼𝙪𝙜𝙢𝙚𝙣𝙩𝙚𝙙 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) pipeline that combined hybrid search (semantic + keyword filtering), 𝘾𝙧𝙤𝙨𝙨𝙀𝙣𝙘𝙤𝙙𝙚𝙧-𝙗𝙖𝙨𝙚𝙙 𝙧𝙚-𝙧𝙖𝙣𝙠𝙞𝙣𝙜, and 𝙇𝙇𝙖𝙈𝘼𝟯-𝟳𝟬𝘽 to generate natural, context-aware responses. I worked on structured web scraping (using BeautifulSoup), vector indexing with FAISS, and designed prompts that maintained session memory for better conversational flow.",
+        "A major focus was improving 𝙖𝙣𝙨𝙬𝙚𝙧 𝙜𝙧𝙤𝙪𝙣𝙙𝙞𝙣𝙜 𝙖𝙣𝙙 𝙛𝙖𝙞𝙩𝙝𝙛𝙪𝙡𝙣𝙚𝙨𝙨, ensuring that every chatbot response could be accurately traced back to its source material — critical for building trust. We rigorously evaluated our system using metrics like 𝙈𝙍𝙍, 𝙋𝙧𝙚𝙘𝙞𝙨𝙞𝙤𝙣@𝙆, 𝙉𝘿𝘾𝙂, and 𝙨𝙚𝙢𝙖𝙣𝙩𝙞𝙘 𝙨𝙞𝙢𝙞𝙡𝙖𝙧𝙞𝙩𝙮 to fine-tune both search and response generation. This project sharpened my skills in building reliable, scalable AI assistants using modern LLM and retrieval techniques."
+      ],
+      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/LuddyChatbot.jpeg",
+      tags: ["RAG", "Hybrid Search", "Re-ranking", "LlaMA", "FAISS", "BeautifulSoup", ],
+      demoUrl: "#",
+      codeUrl: "https://github.com/jgdshkovi/luddy_chatbot",
+      featured: true,
+    },
+    {
       title: "OEIS Graph Database Project",
       description:[
         // "Developed Neo4j graph database from OEIS .seq files to model relationships between sequences, authors, and citations. Leveraged LLMs and RAG architectures for metadata extraction and sequence categorization.",
-        "I developed a Neo4j graph database using OEIS .seq files to model relationships between sequences, authors, and citations. By creating nodes for sequences and authors and using relationships to link them, I structured the data in a way that makes it easy to explore and query interconnected information.",
-        "To enhance the database, I used Large Language Models (LLMs) and RAG architectures for automated metadata extraction and sequence categorization. This approach streamlined the process of organizing data and improved accessibility, allowing users to efficiently retrieve related sequences and their metadata through natural language queries.",
+        // "I developed a Neo4j graph database using OEIS .𝙨𝙚𝙦 files to model relationships between sequences, authors, and citations. By creating nodes for sequences and authors and using relationships to link them, I structured the data in a way that makes it easy to explore and query interconnected information.",
+        // "To enhance the database, I used 𝙇𝙖𝙧𝙜𝙚 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚 𝙈𝙤𝙙𝙚𝙡𝙨 (𝙇𝙇𝙈𝙨) and RAG architectures for 𝙖𝙪𝙩𝙤𝙢𝙖𝙩𝙚𝙙 𝙢𝙚𝙩𝙖𝙙𝙖𝙩𝙖 𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙤𝙣 and sequence categorization. This approach streamlined the process of organizing data and improved accessibility, allowing users to efficiently retrieve related sequences and their metadata through natural language queries.",
+        "In this project, I developed a Neo4j graph database using the 𝙊𝙀𝙄𝙎 (Online Encyclopedia of Integer Sequences) .𝙨𝙚𝙦 files to model relationships between sequences, authors, and citations. The goal was to build a structured, queryable database that could easily represent the interconnectedness of mathematical sequences and their metadata. By using 𝙉𝙚𝙤𝟰𝙟's graph capabilities, I created nodes for sequences, authors, and citations, with relationships to represent how these entities are related.",
+        "To enhance the database, I leveraged 𝙇𝙖𝙧𝙜𝙚 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚 𝙈𝙤𝙙𝙚𝙡𝙨 (𝙇𝙇𝙈𝙨) and 𝙍𝙚𝙩𝙧𝙞𝙚𝙫𝙖𝙡-𝘼𝙪𝙜𝙢𝙚𝙣𝙩𝙚𝙙 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) architectures for automated metadata extraction and sequence categorization. This helped streamline the process of organizing and tagging the data, making the sequences more accessible for researchers and mathematicians. The project improved the efficiency of accessing related sequence information, enabling users to quickly find 𝙡𝙞𝙣𝙠𝙚𝙙 𝙨𝙚𝙦𝙪𝙚𝙣𝙘𝙚𝙨, their authors, and citations through natural language queries."
       ],
       image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/OEIS2.png",
       tags: ["Neo4j", "LLMs", "Sequence Analysis", "Graph Database", "Python"],
@@ -21,8 +35,11 @@ const ProjectsSection = () => {
     {
       title: "Weather Data GCP Pipeline",
       description: [
-        "Designed and implemented an automated ETL pipeline on Google Cloud Platform for weather data management. Utilized Python, Pandas, and OpenWeather API for data extraction, transformation, and storage in BigQuery.",
-        "Deployed and scheduled daily data processing using GCP services like Cloud Functions and Cloud Scheduler. Created interactive data visualizations and dashboards using Looker Studio for weather data analysis.",
+        // "Designed and implemented an automated ETL pipeline on Google Cloud Platform for weather data management. Utilized Python, Pandas, and OpenWeather API for data extraction, transformation, and storage in BigQuery.",
+        // "Deployed and scheduled daily data processing using GCP services like Cloud Functions and Cloud Scheduler. Created interactive data visualizations and dashboards using Looker Studio for weather data analysis.",
+        "This GCP project automates the process of 𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙣𝙜, 𝙥𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜, and 𝙫𝙞𝙨𝙪𝙖𝙡𝙞𝙯𝙞𝙣𝙜 weather data using a range of technologies. The project begins by retrieving real-time weather data from the OpenWeather API, which provides essential information like temperature, humidity, and forecasts. This data is then cleaned and transformed using Python and Pandas, ensuring it's structured and ready for analysis.",
+        "To ensure scalability and automation, the project leverages Google Cloud Platform (GCP). Using GCP services like 𝘾𝙡𝙤𝙪𝙙 𝙁𝙪𝙣𝙘𝙩𝙞𝙤𝙣𝙨, 𝘾𝙡𝙤𝙪𝙙 𝙎𝙘𝙝𝙚𝙙𝙪𝙡𝙚𝙧, 𝘽𝙞𝙜𝙌𝙪𝙚𝙧𝙮, and 𝘾𝙡𝙤𝙪𝙙 𝙎𝙩𝙤𝙧𝙖𝙜𝙚, the ETL (Extract, Transform, Load) workflows run automatically, extracting and processing data at scheduled intervals.",
+        "The final step is the creation of an interactive dashboard using 𝙇𝙤𝙤𝙠𝙚𝙧 𝙎𝙩𝙪𝙙𝙞𝙤, which visualizes the insights derived from the weather data, providing users with an intuitive interface to explore and analyze the information."
       ],
         // "Designed automated ETL pipeline on Google Cloud Platform for weather data management. Used Python, Pandas, and OpenWeather API for data processing and created interactive visualizations with Looker Studio.",
       image: "https://raw.githubusercontent.com/jgdshkovi/MNGMT-ACCESS-FINAL/refs/heads/main/images/GCP-Data-Pipeline.png",
@@ -98,9 +115,10 @@ const ProjectsSection = () => {
           {featuredProjects.map((project, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+              className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center"
               style={{ direction: idx % 2 ? "rtl" : "ltr" }}
             >
+              <div className="md:col-span-2">
               <div
                 className="rounded-2xl overflow-hidden shadow-lg border border-border h-[300px] md:h-[400px] group relative"
                 style={{ direction: "ltr" }}
@@ -127,10 +145,12 @@ const ProjectsSection = () => {
                   </div>
                 </div>
               </div>
-
+              </div>
+              
+              <div className="md:col-span-3">
               <div style={{ direction: "ltr" }}>
-                <span className="text-trendy-secondary text-sm font-medium mb-2 block">Featured Project</span>
-                <h3 className="text-2xl font-bold mb-4 text-trendy-primary">{project.title}</h3>
+                {/* <span className="text-trendy-secondary text-sm font-medium mb-2 block">Featured Project</span> */}
+                <h3 className="text-2xl font-bold mb-4 text-trendy-secondary">{project.title}</h3>
                 <div className="text-trendy-neutral mb-6 space-y-3">
                   {/* {project.description} */}
                   {project.description.map((item, i) => (
@@ -148,6 +168,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
               </div>
+            </div>
             </div>
           ))}
 
