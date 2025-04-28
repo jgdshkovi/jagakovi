@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+// import SpaceModel from "@/components/SpaceModel";
 
 const HeroSection = () => {
   return (

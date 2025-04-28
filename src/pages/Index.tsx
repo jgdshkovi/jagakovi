@@ -33,8 +33,8 @@ const Index = () => {
           <main className="relative px-6 md:px-8 lg:px-12">
             <HeroSection />
             <AboutSection />
-            <ExperienceSection />
             <SkillsSection />
+            <ExperienceSection />
             <ProjectsSection />
             <ContactSection />
           </main>
