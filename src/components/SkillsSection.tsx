@@ -1,6 +1,6 @@
-
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
+import { useInterval } from "@/hooks/useInterval";
 import { SiPython, SiJavascript, SiReact, SiDocker, SiGit } from "react-icons/si";
 import { FaDatabase, FaBrain, FaCode, FaNetworkWired, FaCloud, FaLayerGroup, FaRobot, FaServer, FaCogs, FaAws, FaMicrosoft, FaTools, FaPython, FaJs, FaDocker } from "react-icons/fa";
 
@@ -123,6 +123,16 @@ const SkillsSection = () => {
       ],
     },
   ];
+
+  const rotateCategory = useCallback(() => {
+    setActiveCategory((current) => {
+      const currentIndex = categories.findIndex((cat) => cat.id === current);
+      const nextIndex = (currentIndex + 1) % categories.length;
+      return categories[nextIndex].id;
+    });
+  }, [categories]);
+
+  useInterval(rotateCategory, 5000);
 
   const activeSkills = categories.find((cat) => cat.id === activeCategory)?.skills || [];
 
