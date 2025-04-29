@@ -7,7 +7,7 @@ import { Object3D } from 'three';
 import { OrbitControls, useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 function Model() {
-  const { scene } = useGLTF('/space_model/stylized_mangrove_greenhouse.glb');
+  const { scene } = useGLTF('/models/stylized_mangrove_greenhouse.glb');
   // const modelRef = useRef();
   const modelRef = useRef<Object3D>(null);
   
@@ -70,4 +70,4 @@ export default function SpaceModel() {
 }
 
 // Important! Preload the GLTF model
-useGLTF.preload('/space_model/need_some_space.glb');
+useGLTF.preload('/models/stylized_mangrove_greenhouse.glb');
