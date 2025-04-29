@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 function Model() {
-  const { scene } = useGLTF('public/space_model/need_some_space.glb'); // or .gltf
+  const { scene } = useGLTF('public/space_model/sci-fi_computer_room.glb'); // or .gltf
   return <primitive object={scene} scale={1.5} />;
 }
 
