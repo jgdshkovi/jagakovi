@@ -1,11 +1,13 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,20 +25,47 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    if (!form.current) {
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
       });
       setIsSubmitting(false);
-    }, 1500);
+      return;
+    }
+
+    // Initialize EmailJS with your public key
+    // You need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    emailjs.init('YOUR_PUBLIC_KEY');
+
+    // Send the email using EmailJS
+    // You need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service ID and template ID
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current)
+      .then((result) => {
+        console.log('Email successfully sent!', result.text);
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error.text);
+        toast({
+          title: "Failed to send message",
+          description: "There was a problem sending your message. Please try again later.",
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -127,7 +156,7 @@ const ContactSection = () => {
 
           <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm border border-border">
             <h3 className="text-xl font-bold mb-6 text-trendy-primary">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1 text-trendy-primary">
@@ -136,7 +165,7 @@ const ContactSection = () => {
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="from_name"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -151,7 +180,7 @@ const ContactSection = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="from_email"
                     value={formData.email}
                     onChange={handleChange}
                     required
