@@ -1,18 +1,25 @@
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     subject: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init('NcAxIILtCvx7_CII6');
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,20 +30,43 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    if (!form.current) {
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
       });
       setIsSubmitting(false);
-    }, 1500);
+      return;
+    }
+
+    // Send the email using EmailJS
+    emailjs.sendForm('service_72a0r7a', 'template_jagakovi', form.current)
+      .then((result) => {
+        console.log('Email successfully sent!', result.text);
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        // Reset the form after successful submission
+        setFormData({
+          from_name: "",
+          from_email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        toast({
+          title: "Failed to send message",
+          description: "There was a problem sending your message. Please try again later.",
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -127,17 +157,17 @@ const ContactSection = () => {
 
           <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm border border-border">
             <h3 className="text-xl font-bold mb-6 text-trendy-primary">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-trendy-primary">
+                  <label htmlFor="from_name" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Full Name
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="from_name"
+                    name="from_name"
+                    value={formData.from_name}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
@@ -145,14 +175,14 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-trendy-primary">
+                  <label htmlFor="from_email" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Email Address
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                    id="from_email"
+                    name="from_email"
+                    value={formData.from_email}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
