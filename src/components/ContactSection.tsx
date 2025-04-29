@@ -37,11 +37,11 @@ const ContactSection = () => {
 
     // Initialize EmailJS with your public key
     // You need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-    emailjs.init('YOUR_PUBLIC_KEY');
+    emailjs.init('NcAxIILtCvx7_CII6');
 
     // Send the email using EmailJS
     // You need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service ID and template ID
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current)
+    emailjs.sendForm('service_72a0r7a', 'template_jagakovi', form.current)
       .then((result) => {
         console.log('Email successfully sent!', result.text);
         toast({
