@@ -27,7 +27,7 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="text-2xl md:text-4xl text-trendy-neutral font-medium mb-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            AI/ML Research <span className="text-trendy-secondary">&</span> Data Engineer
+            AI/ML Research <span className="text-trendy-secondary">&</span> Data Engineering
           </h2>
           
           <p className="max-w-xl text-trendy-neutral leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
