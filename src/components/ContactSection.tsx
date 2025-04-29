@@ -1,5 +1,5 @@
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -9,12 +9,17 @@ const ContactSection = () => {
   const { toast } = useToast();
   const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     subject: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init('NcAxIILtCvx7_CII6');
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -35,12 +40,7 @@ const ContactSection = () => {
       return;
     }
 
-    // Initialize EmailJS with your public key
-    // You need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-    emailjs.init('NcAxIILtCvx7_CII6');
-
     // Send the email using EmailJS
-    // You need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service ID and template ID
     emailjs.sendForm('service_72a0r7a', 'template_jagakovi', form.current)
       .then((result) => {
         console.log('Email successfully sent!', result.text);
@@ -48,15 +48,16 @@ const ContactSection = () => {
           title: "Message sent!",
           description: "Thank you for reaching out. I'll get back to you soon.",
         });
+        // Reset the form after successful submission
         setFormData({
-          name: "",
-          email: "",
+          from_name: "",
+          from_email: "",
           subject: "",
           message: "",
         });
       })
       .catch((error) => {
-        console.error('Failed to send email:', error.text);
+        console.error('Failed to send email:', error);
         toast({
           title: "Failed to send message",
           description: "There was a problem sending your message. Please try again later.",
@@ -159,14 +160,14 @@ const ContactSection = () => {
             <form ref={form} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-trendy-primary">
+                  <label htmlFor="from_name" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Full Name
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    id="from_name"
                     name="from_name"
-                    value={formData.name}
+                    value={formData.from_name}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
@@ -174,14 +175,14 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-trendy-primary">
+                  <label htmlFor="from_email" className="block text-sm font-medium mb-1 text-trendy-primary">
                     Email Address
                   </label>
                   <input
                     type="email"
-                    id="email"
+                    id="from_email"
                     name="from_email"
-                    value={formData.email}
+                    value={formData.from_email}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-trendy-secondary/30 transition-all"
