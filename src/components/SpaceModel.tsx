@@ -3,11 +3,13 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { Object3D } from 'three';
 import { OrbitControls, useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 function Model() {
-  const { scene } = useGLTF('/space_model/need_some_space.glb');
-  const modelRef = useRef();
+  const { scene } = useGLTF('/space_model/stylized_mangrove_greenhouse.glb');
+  // const modelRef = useRef();
+  const modelRef = useRef<Object3D>(null);
   
   // Add slight automatic rotation
   useEffect(() => {
@@ -20,7 +22,7 @@ function Model() {
     return () => clearInterval(interval);
   }, []);
   
-  return <primitive ref={modelRef} object={scene} scale={1.5} position={[0, -1, 0]} />;
+  return <primitive ref={modelRef} object={scene} scale={0.2} position={[0, 0, 0]} />;
 }
 
 export default function SpaceModel() {
@@ -48,7 +50,7 @@ export default function SpaceModel() {
         />
         
         {/* Camera setup */}
-        <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={50} />
+        <PerspectiveCamera makeDefault position={[0, 2, 5]} fov={50} />
         
         {/* The 3D model */}
         <Model />
@@ -56,7 +58,7 @@ export default function SpaceModel() {
         {/* Controls */}
         <OrbitControls 
           enablePan={false}
-          enableZoom={true}
+          enableZoom={false}
           minPolarAngle={Math.PI / 6}
           maxPolarAngle={Math.PI / 2}
           autoRotate
