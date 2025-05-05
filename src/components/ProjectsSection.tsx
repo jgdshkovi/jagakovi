@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/LuddyChatbot.jpeg",
       tags: ["RAG", "Hybrid Search", "Re-ranking", "LlaMA", "FAISS", "BeautifulSoup", ],
       demoUrl: "#",
-      codeUrl: "https://github.com/jgdshkovi/luddy_chatbot",
+      codeUrl: "https://github.com/jgdshkovi/LuddyChatbot",
       featured: true,
     },
     {
