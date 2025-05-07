@@ -1,7 +1,10 @@
-
 import { ArrowUpRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Description } from "@radix-ui/react-toast";
+
+// Use below for generating Img-to-Video and Video-to-GIF.
+// https://monica.im/image-tools/animate-a-picture
+// https://ezgif.com/maker
 
 const ProjectsSection = () => {
   const projects = [
@@ -77,7 +80,8 @@ const ProjectsSection = () => {
         "►​ Boosted predictive accuracy by 10% through ensemble methods (RF, CatBoost, XGBoost), optimizing the lending strategy.",
         // "‎ ",
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/HCDR%20Thumbnail.jpeg",
+      // image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/HCDR%20Thumbnail.jpeg",
+      image: "hcdr-gif.gif",
       tags: ["Python", "scikit-learn", "TensorFlow", "Feature Engineering", "MLP"],
       demoUrl: "#",
       codeUrl: "https://github.com/jgdshkovi/CSCI-P-556-Final-Project-HCDR-Fall-2023",
@@ -93,7 +97,7 @@ const ProjectsSection = () => {
         "►​ Incorporated steganography and custom preprocessing to ensure robustness against noise, misalignment, and varying scan quality.",
         // "‎ "
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1/refs/heads/main/Images/marked.png",
+      image: "https://raw.githubusercontent.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1/refs/heads/main/Images/a-48.gif",
       tags: ["PIL", "OpenCV", "Morphological Ops", "Image Processing", "Python"],
       demoUrl: "#",
       codeUrl: "https://github.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1",
@@ -102,7 +106,7 @@ const ProjectsSection = () => {
     {
       title: "Real-Time AI Vector Search Engine",
       description:[
-        "Building a hybrid vector search system that supports static data and real-time streaming updates via Kafka, RabbitMQ, and BigQuery for low-latency, intelligent retrieval.",
+        "Building a hybrid vector search system that supports static data and real-time streaming updates via Kafka/RabbitMQ, and/or BigQuery for low-latency, intelligent retrieval.",
         "‎ ",
         "",
         "",
@@ -110,7 +114,8 @@ const ProjectsSection = () => {
         // "‎ "
       ],
       // image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=307&auto=format&fit=crop",
-      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/vectorStore.png",
+      // image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/vector-store.png",
+      image: "vec-store.gif",
       tags: ["Coming Soon"],
       demoUrl: "#",
       codeUrl: "#",
@@ -246,14 +251,16 @@ const ProjectsSection = () => {
                           Live Demo <ArrowUpRight className="h-3 w-3" />
                         </a>
                       )}
-                      <a
-                        href={project.codeUrl}
-                        className="text-sm font-medium text-trendy-primary hover:underline flex items-center gap-1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub <Github className="h-3 w-3" />
-                      </a>
+                      {project.codeUrl && project.codeUrl !== "#" && (
+                        <a
+                          href={project.codeUrl}
+                          className="text-sm font-medium text-trendy-primary hover:underline flex items-center gap-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub <Github className="h-3 w-3" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
