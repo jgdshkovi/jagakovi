@@ -9,9 +9,15 @@ const ExperienceSection = () => {
       duration: "Sep 2024 - Present",
       location: "California, CA",
       description: [
-        "Architected scalable backend and streamlined SQL queries for processing over 12M tax records",
-        "Leveraged Indiana University's Big Red 200 supercomputer to fine-tune NLP models",
-        "Engineered AI chatbots using advanced NLP techniques for improved data access",
+        // "Architected scalable backend and streamlined SQL queries for processing over 12M tax records",
+        // "Leveraged Indiana University's Big Red 200 supercomputer to fine-tune NLP models",
+        // "Engineered AI chatbots using advanced NLP techniques for improved data access",
+        "Engineered scalable backend architecture and optimized database queries to efficiently process and deliver real-time analytics from 12M+ tax records, significantly enhancing data accessibility.",
+        "Leveraged IU's Big Red 200 supercomputer for fine-tuning NLP models, achieving high-accuracy categorization of organization mission statements, and implemented advanced NLP chatbots to streamline information access for philanthropic stakeholders.",
+        "Collaborated with cross-functional teams to integrate new analytics features and enhance user experience, driving data-informed decisions and improving operational efficiency for philanthropic foundations and grantees.",
+        // "Architected scalable backend and streamlined SQL queries for processing over 12M tax records, enhancing access to real-time philanthropic insights.",
+        // "Leveraged Indiana University's Big Red 200 supercomputer to fine-tune NLP models for classifying nonprofit mission statements.",
+        // "Engineered AI chatbots using advanced NLP to provide information access to philanthropic foundations, enhancing stakeholder engagement.",
       ],
     },
     {
@@ -20,10 +26,14 @@ const ExperienceSection = () => {
       duration: "Sep 2024 - Apr 2025",
       location: "Bloomington, IN",
       description: [
-        "Built GPT-4o-based speech transformer for aphasic input reconstruction",
-        "Created correction pipeline with SentenceTransformers for improved accuracy",
-        "Used Whisper for STT and pyttsx3 for TTS in language processing applications",
-        "Designed real-time feedback system for language rehabilitation",
+        // "Built GPT-4o-based speech transformer for aphasic input reconstruction",
+        // "Created correction pipeline with SentenceTransformers for improved accuracy",
+        // "Used Whisper for STT and pyttsx3 for TTS in language processing applications",
+        // "Designed real-time feedback system for language rehabilitation",
+        "Built an AI-powered system using GPT-4o and Whisper to convert impaired speech into clear, fluent sentences, improving communication for patients with aphasia.",
+        "Developed a real-time, voice-interactive pipeline combining speech-to-text, language correction, and text-to-speech to support continuous speech rehabilitation.",
+        "Fine-tuned large language models using patient data and adaptive techniques (LoRA/PEFT) to accurately detect and correct common speech impairments like word-finding issues.",
+
       ],
     },
     {
@@ -32,9 +42,12 @@ const ExperienceSection = () => {
       duration: "May 2024 - Aug 2024",
       location: "Bloomington, IN",
       description: [
-        "Developed NLP-based risk visualization tool for business analysis",
-        "Engineered ETL pipeline using Python, AWS Lambda, and RDS",
-        "Launched real-time dashboard with AWS EC2 and CloudWatch monitoring",
+        // "Developed NLP-based risk visualization tool for business analysis",
+        // "Engineered ETL pipeline using Python, AWS Lambda, and RDS",
+        // "Launched real-time dashboard with AWS EC2 and CloudWatch monitoring",
+        "Built an NLP-powered tool to analyze corporate compliance risks, reducing manual review time by 50% and surfacing key regulatory trends.",
+        "Designed a scalable ETL pipeline using Python, AWS Lambda, and PostgreSQL to automate data collection from 10+ regulatory sources, boosting data coverage by 70%.",
+        "Deployed a real-time compliance insights dashboard on AWS EC2 with CloudWatch monitoring, delivering actionable analytics and improving system reliability.",
       ],
     },
     {
@@ -43,10 +56,13 @@ const ExperienceSection = () => {
       duration: "Oct 2021 - Nov 2022",
       location: "Remote",
       description: [
-        "Refined data pipelines for 30+ banking modules via SQL & Apache Kafka",
-        "Deployed interactive Tableau dashboards for financial analytics",
-        "Applied Python (Pandas, NumPy) and SQL for ETL and data aggregation",
-        "Integrated automated data validation in CI/CD pipelines",
+        // "Refined data pipelines for 30+ banking modules via SQL & Apache Kafka",
+        // "Deployed interactive Tableau dashboards for financial analytics",
+        // "Applied Python (Pandas, NumPy) and SQL for ETL and data aggregation",
+        // "Integrated automated data validation in CI/CD pipelines",
+        "Helped modernize FIS Global's legacy Customer Setup platform by rewriting IBM AS/400 systems in AngularJS, integrating 30+ core banking modules (KYC, FraudChex, M&A, etc.), improving access time by 60%, and contributing across UI, DevOps (CI/CD), testing, and production deployments in an Agile/Scrum environment.",
+        "Refined data pipelines for 30+ core banking modules using SQL and Apache Kafka, enhancing real-time accuracy and scalability to ~100K daily transactions; deployed interactive Tableau dashboards, reducing data access time by 60% and accelerating cross-functional decision-making.",
+        "Improved ETL and data aggregation using Python (Pandas, NumPy) and SQL, reducing query resolution time by 45% and boosting system performance; integrated automated data validation into CI/CD pipelines with Jenkins and PyTest, cutting deployment time by 50% and minimizing data discrepancies.",
       ],
     },
   ];
@@ -57,14 +73,26 @@ const ExperienceSection = () => {
       institution: "Indiana University Bloomington",
       duration: "Aug 2023 - May 2025",
       location: "Bloomington, IN",
-      description: "GPA: 3.74/4.0 | Research Interests: NLP, AI Agents, LLMs, Applied Machine Learning, Reinforcement Learning",
-    },
+      description: [
+        // "GPA: 3.74/4.0",
+        <>
+          <b>GPA:</b> 3.74/4.0
+        </>,
+        <> <b>Coursework:</b> Data Mining, Statistics (R), Applied Machine Learning, Scientific Visualization, Computer Vision, Applied Algorithms, Big Data, Advanced Database Concepts</>,
+        <> <b>Research Interests</b> NLP, AI Agents, LLMs, Applied Machine Learning, Reinforcement Learning</>,
+      ]
+      },
     {
       degree: "Bachelor's in Computer Science",
       institution: "Siddharth Institute of Engineering & Technology",
       duration: "Jul 2017 - Jun 2021",
       location: "India",
-      description: "CGPA: 8.8/10.0 | Publication: Detection of Online Toxic Comments Using Deep Learning",
+      description: [
+        <> <b>CGPA:</b> 8.8/10.0</>,
+        <> <b>Coursework:</b> Computer Programming, Data Structures & Algorithms, Database Management Systems, Operating Systems, Software Engineering & Architecture, Computer Organization, Computer Networks</>,
+        <> <b>Publication:</b> Detection of Online Toxic Comments Using Deep Learning</>,
+
+      ]
     },
   ];
 
@@ -150,7 +178,15 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   
-                  <p className="text-trendy-neutral">{edu.description}</p>
+                  {/* <p className="text-trendy-neutral">{edu.description}</p> */}
+                  <ul className="space-y-1 text-trendy-neutral">
+                    {edu.description.map((item, i) => (
+                      <li key={i} className="pl-5 relative">
+                        <span className="absolute left-0 top-2 w-1.5 h-1.5 bg-trendy-secondary rounded-full"></span>
+                        <span className="ml-1">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

@@ -84,11 +84,34 @@ const ProjectsSection = () => {
       featured: false,
     },
     {
-      title: "GPT-4o Speech Transformer",
+      title: "OMR Sheet Processing and Answer Extraction",
       description:[
-        "Built speech transformation system for aphasic input using GPT-4o and SentenceTransformers. Integrated Whisper STT and pyttsx3 TTS with real-time feedback mechanisms."],
-      image: "https://images.unsplash.com/photo-1633613286991-611fe299c4be",
-      tags: ["GPT-4o", "Whisper", "SentenceTransformers", "NLP", "Speech Processing"],
+        "As part of an Advanced Machine Learning coursework, I tackled a real-world Kaggle problem to predict default risk for Home Credit's lending strategy:",
+        "‎ ",
+        "►​ Built an end-to-end pipeline with Python, OpenCV, and PIL, applying morphological operations, contour detection, and barcode encoding/decoding.",
+        "►​ Achieved over 99% accuracy on the validation dataset, processing each form in under 3 seconds.",
+        "►​ Incorporated steganography and custom preprocessing to ensure robustness against noise, misalignment, and varying scan quality.",
+        // "‎ "
+      ],
+      image: "https://raw.githubusercontent.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1/refs/heads/main/Images/marked.png",
+      tags: ["PIL", "OpenCV", "Morphological Ops", "Image Processing", "Python"],
+      demoUrl: "#",
+      codeUrl: "https://github.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1",
+      featured: false,
+    },
+    {
+      title: "Real-Time AI Vector Search Engine",
+      description:[
+        "Building a hybrid vector search system that supports static data and real-time streaming updates via Kafka, RabbitMQ, and BigQuery for low-latency, intelligent retrieval.",
+        "‎ ",
+        "",
+        "",
+        "",
+        // "‎ "
+      ],
+      // image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=307&auto=format&fit=crop",
+      image: "public\vectorStore.png",
+      tags: ["Coming Soon"],
       demoUrl: "#",
       codeUrl: "#",
       featured: false,
