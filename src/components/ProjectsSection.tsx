@@ -110,7 +110,7 @@ const ProjectsSection = () => {
         // "‎ "
       ],
       // image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=307&auto=format&fit=crop",
-      image: "public\vectorStore.png",
+      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/vectorStore.png",
       tags: ["Coming Soon"],
       demoUrl: "#",
       codeUrl: "#",
