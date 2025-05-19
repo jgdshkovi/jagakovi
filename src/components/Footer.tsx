@@ -1,8 +1,22 @@
-
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
   
   return (
     <footer className="bg-secondary/20 py-12">
@@ -10,7 +24,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="font-heading text-xl font-bold">
-              <a href="#hero" className="text-accent">
+              <a href="#hero" onClick={(e) => handleNavClick(e, "hero")} className="text-accent">
                 <span className="relative pr-1 text-trendy-secondary">Jaga</span>
               </a>
             </div>
@@ -64,6 +78,7 @@ const Footer = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
+                  onClick={(e) => handleNavClick(e, item.toLowerCase())}
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   {item}

@@ -152,8 +152,8 @@ const SkillsSection = () => {
             variant={activeCategory === category.id ? "default" : "outline"}
             onClick={() => setActiveCategory(category.id)}
             className={activeCategory === category.id ? 
-              "bg-trendy-secondary text-white hover:bg-trendy-secondary/90" : 
-              "border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10"}
+              "bg-trendy-secondary text-white hover:bg-trendy-secondary/90 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg" : 
+              "border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10 transition-all duration-300 transform hover:scale-105 hover:shadow-md"}
           >
             {category.name}
           </Button>

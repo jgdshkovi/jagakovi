@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SpaceModel from "@/components/SpaceModel";
@@ -6,6 +5,21 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <section
@@ -37,7 +51,7 @@ const HeroSection = () => {
           
           <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: "1s" }}>
             <Button size="lg" className="gap-2 bg-trendy-secondary text-white hover:bg-trendy-secondary/90">
-              View Projects <ArrowRight className="h-4 w-4" />
+              <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>View Projects</a> <ArrowRight className="h-4 w-4" />
             </Button>
             
             <Button variant="outline" size="lg" className="border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10" onClick={() => window.open('/Jagadeesh_Kovi.pdf', '_blank')}>
