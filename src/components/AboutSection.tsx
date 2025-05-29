@@ -24,11 +24,11 @@ const AboutSection = () => {
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <Calendar className="h-4 w-4 text-accent" />
-                    <span>3+ Years Experience</span>
+                    <span>3+ Years of Experience</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-accent" />
-                    <span>California, CA</span>
+                    <span>Santa Clara, CA</span>
                   </div>
                 </div>
               </div>

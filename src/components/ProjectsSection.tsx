@@ -178,7 +178,16 @@ const ProjectsSection = () => {
               <div className="md:col-span-3">
               <div style={{ direction: "ltr" }}>
                 {/* <span className="text-trendy-secondary text-sm font-medium mb-2 block">Featured Project</span> */}
-                <h3 className="text-2xl font-bold mb-4 text-trendy-secondary">{project.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-trendy-secondary">
+                  <a 
+                    href={project.codeUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {project.title}
+                  </a>
+                </h3>
                 <div className="text-trendy-neutral mb-6 space-y-3">
                   {/* {project.description} */}
                   {project.description.map((item, i) => (

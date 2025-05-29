@@ -101,8 +101,9 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Phone</h3>
-                    <a href="tel:+14084754078" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
-                      +1 (408) 475-4078
+                    <a href="tel:+18126793457" className="text-sm text-trendy-neutral hover:text-trendy-secondary">
+                      {/* +1 (408) 475-4078 */}
+                      +1 (812) 679-3457
                     </a>
                   </div>
                 </div>
@@ -114,7 +115,7 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Location</h3>
                     <p className="text-sm text-trendy-neutral">
-                      San Francisco, California
+                      Santa Clara, California
                     </p>
                   </div>
                 </div>
