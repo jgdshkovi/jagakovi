@@ -2,9 +2,47 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SpaceModel from "@/components/SpaceModel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 1.2
+      }
+    }
+  };
+
+  const badgeVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 20,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10
+      }
+    }
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -60,16 +98,103 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Right column - 3D Model */}
-        {!isMobile && (
-          <div className="h-[500px] w-full relative animate-fade-in" style={{ animationDelay: "1.2s" }}>
-            <SpaceModel />
-          </div>
-        )}
+        {/* Right column - Certification Badges */}
+        <motion.div 
+          className="flex flex-wrap justify-center items-center gap-6 p-8 relative"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Decorative elements */}
+          <motion.div 
+            className="absolute top-0 right-0 w-32 h-32 bg-trendy-secondary/5 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 0.8, 0.5]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div 
+            className="absolute bottom-0 left-0 w-32 h-32 bg-trendy-primary/5 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 0.8, 0.5]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          
+          {/* Badge items */}
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
+              src="/certifications/aws_mla_c01.png" 
+              alt="AWS Certified ML Engineer Associate" 
+              className="w-32 h-32 object-contain"
+            />
+          </motion.div>
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
+              src="/certifications/oracledb_23ai_vec.png" 
+              alt="Oracle AI Vector Search Certified Professional" 
+              className="w-32 h-32 object-contain"
+            />
+          </motion.div>
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
+              src="/certifications/apex_cloud_dev.png" 
+              alt="Oracle APEX Cloud Developer Certified Professional" 
+              className="w-32 h-32 object-contain"
+            />
+          </motion.div>
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
+              src="/certifications/ms_az_900.png" 
+              alt="Microsoft Certified: Azure Fundamentals" 
+              className="w-32 h-32 object-contain"
+            />
+          </motion.div>
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
+              src="/certifications/databricks_fundamentals.png" 
+              alt="Oracle APEX Cloud Developer Certified Professional" 
+              className="w-32 h-32 object-contain"
+            />
+          </motion.div>
+        </motion.div>
+        
+
       </div>
       
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block animate-bounce">
-        <a href="#about" className="text-trendy-neutral hover:text-trendy-secondary">
+        <a href="#about" onClick={(e) => handleNavClick(e, "about")} className="text-trendy-neutral hover:text-trendy-secondary">
           <div className="flex flex-col items-center gap-2">
             <span className="text-sm">Scroll Down</span>
             <ArrowRight className="h-4 w-4 rotate-90" />
