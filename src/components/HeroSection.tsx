@@ -1,6 +1,7 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import SpaceModel from "@/components/SpaceModel";
+import CertificationBadges from "@/components/CertificationBadges";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const HeroSection = () => {
@@ -60,10 +61,10 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Right column - 3D Model */}
+        {/* Right column - Certification Badges */}
         {!isMobile && (
           <div className="h-[500px] w-full relative animate-fade-in" style={{ animationDelay: "1.2s" }}>
-            <SpaceModel />
+            <CertificationBadges />
           </div>
         )}
       </div>
