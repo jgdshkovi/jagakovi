@@ -11,10 +11,10 @@ const ProjectsSection = () => {
     {
       title: "LuddyBot: AI-Powered Academic Support Chatbot",
       description:[
-        "As part of a team project at Indiana University, I helped develop 𝙇𝙪𝙙𝙙𝙮𝘽𝙤𝙩, an AI-powered Chrome Extension chatbot designed to assist students with academic queries by accessing resources from the Luddy School website. We built a 𝙍𝙚𝙩𝙧𝙞𝙚𝙫𝙖𝙡-𝘼𝙪𝙜𝙢𝙚𝙣𝙩𝙚𝙙 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) pipeline that combined hybrid search (semantic + keyword filtering), 𝘾𝙧𝙤𝙨𝙨𝙀𝙣𝙘𝙤𝙙𝙚𝙧-𝙗𝙖𝙨𝙚𝙙 𝙧𝙚-𝙧𝙖𝙣𝙠𝙞𝙣𝙜, and 𝙇𝙇𝙖𝙈𝘼𝟯-𝟳𝟬𝘽 to generate natural, context-aware responses. I worked on structured web scraping (using BeautifulSoup), vector indexing with FAISS, and designed prompts that maintained session memory for better conversational flow.",
+        "As part of a team project at Indiana University, I helped develop 𝙇𝙪𝙙𝙙𝙮𝘽𝙤𝙩 𝙇𝙤𝙗𝙩 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) pipeline that combined hybrid search (semantic + keyword filtering), 𝘾𝙧𝙤𝙨𝙨𝙀𝙣𝙘𝙤𝙙𝙚𝙧-𝙗𝙖𝙨𝙚𝙙 𝙧𝙚-𝙧𝙖𝙣𝙠𝙞𝙣𝙜, and 𝙇𝙇𝙖𝙈𝘼𝟯-𝟳𝟬𝘽 to generate natural, context-aware responses. I worked on structured web scraping (using BeautifulSoup), vector indexing with FAISS, and designed prompts that maintained session memory for better conversational flow.",
         "A major focus was improving 𝙖𝙣𝙨𝙬𝙚𝙧 𝙜𝙧𝙤𝙪𝙣𝙙𝙞𝙣𝙜 𝙖𝙣𝙙 𝙛𝙖𝙞𝙩𝙝𝙛𝙪𝙡𝙣𝙚𝙨𝙨, ensuring that every chatbot response could be accurately traced back to its source material — critical for building trust. We rigorously evaluated our system using metrics like 𝙈𝙍𝙍, 𝙋𝙧𝙚𝙘𝙞𝙨𝙞𝙤𝙣@𝙆, 𝙉𝘿𝘾𝙂, and 𝙨𝙚𝙢𝙖𝙣𝙩𝙞𝙘 𝙨𝙞𝙢𝙞𝙡𝙖𝙧𝙞𝙩𝙮 to fine-tune both search and response generation. This project sharpened my skills in building reliable, scalable AI assistants using modern LLM and retrieval techniques."
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/LuddyChatbot.jpeg",
+      image: "/LuddyChatbot.jpeg",
       tags: ["RAG", "Hybrid Search", "Re-ranking", "LlaMA", "FAISS", "BeautifulSoup", ],
       demoUrl: "#",
       codeUrl: "https://github.com/jgdshkovi/LuddyChatbot",
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
         "In this project, I developed a Neo4j graph database using the 𝙊𝙀𝙄𝙎 (Online Encyclopedia of Integer Sequences) .𝙨𝙚𝙦 files to model relationships between sequences, authors, and citations. The goal was to build a structured, queryable database that could easily represent the interconnectedness of mathematical sequences and their metadata. By using 𝙉𝙚𝙤𝟰𝙟's graph capabilities, I created nodes for sequences, authors, and citations, with relationships to represent how these entities are related.",
         "To enhance the database, I leveraged 𝙇𝙖𝙧𝙜𝙚 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚 𝙈𝙤𝙙𝙚𝙡𝙨 (𝙇𝙇𝙈𝙨) and 𝙍𝙚𝙩𝙧𝙞𝙚𝙫𝙖𝙡-𝘼𝙪𝙜𝙢𝙚𝙣𝙩𝙚𝙙 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) architectures for automated metadata extraction and sequence categorization. This helped streamline the process of organizing and tagging the data, making the sequences more accessible for researchers and mathematicians. The project improved the efficiency of accessing related sequence information, enabling users to quickly find 𝙡𝙞𝙣𝙠𝙚𝙙 𝙨𝙚𝙦𝙪𝙚𝙣𝙘𝙚𝙨, their authors, and citations through natural language queries."
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/OEIS2.png",
+      image: "/OEIS2.png",
       tags: ["Neo4j", "LLMs", "Sequence Analysis", "Graph Database", "Python"],
       demoUrl: "#",
       codeUrl: "#",
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
         "The final step is the creation of an interactive dashboard using 𝙇𝙤𝙤𝙠𝙚𝙧 𝙎𝙩𝙪𝙙𝙞𝙤, which visualizes the insights derived from the weather data, providing users with an intuitive interface to explore and analyze the information."
       ],
         // "Designed automated ETL pipeline on Google Cloud Platform for weather data management. Used Python, Pandas, and OpenWeather API for data processing and created interactive visualizations with Looker Studio.",
-      image: "https://raw.githubusercontent.com/jgdshkovi/MNGMT-ACCESS-FINAL/refs/heads/main/images/GCP-Data-Pipeline.png",
+      image: "/GCP-Data-Pipeline.png",
       tags: ["GCP", "ETL", "Cloud Storage", "BigQuery", "Looker Studio"],
       demoUrl: "",
       codeUrl: "https://github.com/jgdshkovi/MNGMT-ACCESS-FINAL",
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         // "‎ ",
         "This made it much easier for staff and researchers to locate specific historic footage."
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/jagakovi/refs/heads/main/public/IULMIA1.png",
+      image: "/IULMIA1.png",
       tags: ["Computer Vision", "DINO+SAM", "YOLOv8", "Object Detection", "PyTorch"],
       demoUrl: "#",
       codeUrl: "https://github.com/jgdshkovi/B657_final_project",
@@ -97,7 +97,7 @@ const ProjectsSection = () => {
         "►​ Incorporated steganography and custom preprocessing to ensure robustness against noise, misalignment, and varying scan quality.",
         // "‎ "
       ],
-      image: "https://raw.githubusercontent.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1/refs/heads/main/Images/a-48.gif",
+      image: "/a-48.gif",
       tags: ["PIL", "OpenCV", "Morphological Ops", "Image Processing", "Python"],
       demoUrl: "#",
       codeUrl: "https://github.com/jgdshkovi/cs-b657-sp2024-jagakovi-adadelek-meocakir-a1",

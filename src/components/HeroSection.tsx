@@ -150,6 +150,17 @@ const HeroSection = () => {
             className="transform"
           >
             <img 
+              src="/certifications/engineer_data_BQ1.png" 
+              alt="Engineer Data for Predictive Modeling with BigQuery" 
+              className="w-40 h-40 object-contain"
+            />
+          </motion.div>
+          <motion.div 
+            variants={badgeVariants}
+            whileHover="hover"
+            className="transform"
+          >
+            <img 
               src="/certifications/oracledb_23ai_vec.png" 
               alt="Oracle AI Vector Search Certified Professional" 
               className="w-32 h-32 object-contain"
