@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       image: "/OEIS2.png",
       tags: ["Neo4j", "LLMs", "Sequence Analysis", "Graph Database", "Python"],
       demoUrl: "#",
-      codeUrl: "#",
+      codeUrl: "https://github.com/jgdshkovi/OEIS-Analysis",
       featured: true,
     },
     {
