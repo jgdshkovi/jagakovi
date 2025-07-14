@@ -6,7 +6,7 @@ const ExperienceSection = () => {
       title: "Machine Learning Engineer",
       company: "Project 990",
       duration: "Sep 2024 - Present",
-      location: "Washington, DC",
+      location: "Bloomington, IN",
       description: [
         // "Architected scalable backend and streamlined SQL queries for processing over 12M tax records",
         // "Leveraged Indiana University's Big Red 200 supercomputer to fine-tune NLP models",
