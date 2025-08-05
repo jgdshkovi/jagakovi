@@ -1,6 +1,7 @@
 
 import { useState, useRef, useEffect } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import XIcon from "./XIcon";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
@@ -143,13 +144,20 @@ const ContactSection = () => {
                     <Linkedin className="h-5 w-5 text-trendy-primary" />
                   </a>
                   <a 
-                    href="https://jgdshkovi.github.io/portfolio" 
+                    href="https://x.com/jagakovi" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
-                    aria-label="Portfolio"
+                    aria-label="X (Twitter)"
                   >
-                    <ArrowUpRight className="h-5 w-5 text-trendy-primary" />
+                    <XIcon className="h-5 w-5 text-trendy-primary" />
+                  </a>
+                  <a 
+                    href="mailto:jagakovi@gmail.com" 
+                    className="bg-trendy-accent hover:bg-trendy-secondary/20 transition-colors p-3 rounded-lg"
+                    aria-label="Email"
+                  >
+                    <Mail className="h-5 w-5 text-trendy-primary" />
                   </a>
                 </div>
               </div>

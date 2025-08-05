@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import XIcon from "./XIcon";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -54,13 +55,13 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a 
-                href="https://jgdshkovi.github.io/portfolio" 
+                href="https://x.com/jagakovi" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
-                aria-label="Portfolio"
+                aria-label="X (Twitter)"
               >
-                <ArrowUpRight className="h-5 w-5" />
+                <XIcon className="h-5 w-5" />
               </a>
               <a 
                 href="mailto:jagakovi@gmail.com" 
