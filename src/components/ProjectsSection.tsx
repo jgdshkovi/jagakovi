@@ -11,7 +11,7 @@ const ProjectsSection = () => {
     {
       title: "LuddyBot: AI-Powered Academic Support Chatbot",
       description:[
-        "As part of a team project at Indiana University, I helped develop 𝙇𝙪𝙙𝙙𝙮𝘽𝙤𝙩 𝙇𝙤𝙗𝙩 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) pipeline that combined hybrid search (semantic + keyword filtering), 𝘾𝙧𝙤𝙨𝙨𝙀𝙣𝙘𝙤𝙙𝙚𝙧-𝙗𝙖𝙨𝙚𝙙 𝙧𝙚-𝙧𝙖𝙣𝙠𝙞𝙣𝙜, and 𝙇𝙇𝙖𝙈𝘼𝟯-𝟳𝟬𝘽 to generate natural, context-aware responses. I worked on structured web scraping (using BeautifulSoup), vector indexing with FAISS, and designed prompts that maintained session memory for better conversational flow.",
+        "As part of a team project at Indiana University, I helped develop 𝙇𝙪𝙙𝙙𝙮𝘽𝙤𝙩, an AI-powered Chrome Extension chatbot designed to assist students with academic queries by accessing resources from the Luddy School website. We built a 𝙍𝙚𝙩𝙧𝙞𝙚𝙫𝙖𝙡-𝘼𝙪𝙜𝙢𝙚𝙣𝙩𝙚𝙙 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣 (𝙍𝘼𝙂) pipeline that combined hybrid search (semantic + keyword filtering), 𝘾𝙧𝙤𝙨𝙨𝙀𝙣𝙘𝙤𝙙𝙚𝙧-𝙗𝙖𝙨𝙚𝙙 𝙧𝙚-𝙧𝙖𝙣𝙠𝙞𝙣𝙜, and 𝙇𝙇𝙖𝙈𝘼𝟯-𝟳𝟬𝘽 to generate natural, context-aware responses. I worked on structured web scraping (using BeautifulSoup), vector indexing with FAISS, and designed prompts that maintained session memory for better conversational flow.",
         "A major focus was improving 𝙖𝙣𝙨𝙬𝙚𝙧 𝙜𝙧𝙤𝙪𝙣𝙙𝙞𝙣𝙜 𝙖𝙣𝙙 𝙛𝙖𝙞𝙩𝙝𝙛𝙪𝙡𝙣𝙚𝙨𝙨, ensuring that every chatbot response could be accurately traced back to its source material — critical for building trust. We rigorously evaluated our system using metrics like 𝙈𝙍𝙍, 𝙋𝙧𝙚𝙘𝙞𝙨𝙞𝙤𝙣@𝙆, 𝙉𝘿𝘾𝙂, and 𝙨𝙚𝙢𝙖𝙣𝙩𝙞𝙘 𝙨𝙞𝙢𝙞𝙡𝙖𝙧𝙞𝙩𝙮 to fine-tune both search and response generation. This project sharpened my skills in building reliable, scalable AI assistants using modern LLM and retrieval techniques."
       ],
       image: "/LuddyChatbot.jpeg",
