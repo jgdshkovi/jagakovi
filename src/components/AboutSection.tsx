@@ -22,7 +22,7 @@ const AboutSection = () => {
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <Calendar className="h-4 w-4 text-accent" />
-                    <span>3+ Years of Experience</span>
+                    <span>4 years of Experience</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-accent" />
@@ -56,7 +56,7 @@ const AboutSection = () => {
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { number: "3+", label: "Years Experience" },
+                { number: "4", label: "Years Experience" },
                 { number: "12M+", label: "Data Records Processed" },
                 { number: "5+", label: "Research Projects" },
                 { number: "1", label: "Publication" },

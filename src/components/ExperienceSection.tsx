@@ -3,9 +3,21 @@ import { Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: "AI Engineer (Financial & Audit)",
+      company: "Project 990",
+      duration: "Oct 2025 - Present",
+      location: "Irvine, CA",
+      description: [
+        "Building AI systems that automate financial and audit workflows.",
+        "Client & Project Setup - Automated Trial Balance, Balance Sheet, Statement of Activities, Cash Flows and other financial reports generation.",
+        "Agentic Data extraction from documents, agreements and other sources for audit and compliance purposes.",
+        "Full-stack development to AI engineering, building and deploying AI systems that automate financial and audit workflows.",
+      ],
+    },
+    {
       title: "Machine Learning Engineer",
       company: "Project 990",
-      duration: "Sep 2024 - Present",
+      duration: "Sep 2024 - Oct 2025",
       location: "Bloomington, IN",
       description: [
         // "Architected scalable backend and streamlined SQL queries for processing over 12M tax records",

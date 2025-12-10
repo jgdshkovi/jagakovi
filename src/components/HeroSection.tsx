@@ -29,7 +29,7 @@ const HeroSection = () => {
       y: 0,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 10
       }
@@ -37,7 +37,7 @@ const HeroSection = () => {
     hover: {
       scale: 1.1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 10
       }
@@ -92,9 +92,9 @@ const HeroSection = () => {
               <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>View Projects</a> <ArrowRight className="h-4 w-4" />
             </Button>
             
-            <Button variant="outline" size="lg" className="border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10" onClick={() => window.open('/Jagadeesh_Kovi_Resume.pdf', '_blank')}>
+            {/* <Button variant="outline" size="lg" className="border-trendy-primary text-trendy-primary hover:bg-trendy-primary/10" onClick={() => window.open('/Jagadeesh_Kovi_Resume.pdf', '_blank')}>
               Download Resume
-            </Button>
+            </Button> */}
           </div>
         </div>
         
