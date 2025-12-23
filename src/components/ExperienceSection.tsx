@@ -4,7 +4,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "AI Engineer (Financial & Audit)",
-      company: "Project 990",
+      company: "GreenGrowth CPAs",
       duration: "Oct 2025 - Present",
       location: "Irvine, CA",
       description: [
