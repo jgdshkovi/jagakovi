@@ -116,7 +116,7 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-medium mb-1 text-trendy-primary">Location</h3>
                     <p className="text-sm text-trendy-neutral">
-                      Santa Clara, California
+                      Irvine, California
                     </p>
                   </div>
                 </div>
